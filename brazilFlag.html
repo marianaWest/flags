@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flags</title>
+   
+</head>
+<body>
+    <canvas id="canvas" width="220" height="150"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, 200, 150);
+
+        let diamond = new Path2D();
+        diamond.moveTo(25, 75);
+        diamond.lineTo(100, 125);
+        diamond.lineTo(175, 75);
+        diamond.lineTo(100, 25);
+        diamond.closePath();
+
+        ctx.fillStyle = "yellow";
+        ctx.fill(diamond, "evenodd");
+        
+        let circle = new Path2D();
+        circle.arc(100, 75, 25, 0, 2 * Math.PI);
+        ctx.fillStyle = "blue";
+        ctx.fill(circle, "evenodd");
+
+        ctx.beginPath();
+        ctx.arc(100, 150, 80, 1.4 * Math.PI, 1.6 * Math.PI);
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+       
+         let faixa = new Path2D();
+        faixa.arc(100, 150, 80, 1.4 * Math.PI, 1.6 * Math.PI);
+        faixa.lineTo(125, 75);
+        faixa.arc(100, 150, 75, 1.6 * Math.PI, 1.4 * Math.PI, true);
+         ctx.strokeStyle = "white";
+        ctx.stroke(faixa);
+        ctx.fillStyle = "white";
+        ctx.fill(faixa);
+
+        ctx.beginPath();
+         ctx.arc(110, 65, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(108, 80, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(82, 82, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(87, 90, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(87, 80, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(85, 85, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(95, 85, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(95,88, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(100,88, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(108,88, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(115,88, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(115,83, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+         ctx.beginPath();
+         ctx.arc(110, 92, 1, 0, 2 * Math.PI);     
+         ctx.fillStyle = "white";
+         ctx.fill();
+
+    </script>
+
+    <canvas id="canvasX" width="90" height="70"></canvas>
+    <script>
+        const canvasX = document.getElementById("canvasX");
+        const ctxX = canvasX.getContext("2d");
+        ctxX.fillStyle = "white";
+        ctxX.fillRect(0, 0, 70, 70);
+
+        ctxX.lineWidth = 6;
+        ctxX.strokeStyle = "grey";
+
+        ctxX.beginPath();
+        ctxX.moveTo(5, 5);
+        ctxX.lineTo(65, 65);
+        ctxX.stroke();
+
+        ctxX.beginPath();
+        ctxX.moveTo(5, 65);
+        ctxX.lineTo(65, 5);
+        ctxX.stroke();
+    </script>
+
+<canvas id="canvasY" width="220" height="150"></canvas>
+<script>
+    const canvasY = document.getElementById("canvasY");
+        const ctxY = canvasY.getContext("2d");
+        ctxY.fillStyle = "red";
+        ctxY.fillRect(0, 0, 200, 150);
+
+        let cruzH = new Path2D();
+        cruzH.moveTo(90, 20);
+        cruzH.lineTo(110, 20);
+        cruzH.lineTo(110, 130);
+        cruzH.lineTo(90, 130);
+        cruzH.lineTo(90, 20);
+         ctxY.strokeStyle = "white";
+        ctxY.stroke(cruzH);
+        ctxY.fillStyle = "white";
+        ctxY.fill(cruzH);
+
+        let cruzV= new Path2D();
+        cruzV.moveTo(45, 65);
+        cruzV.lineTo(155, 65);
+        cruzV.lineTo(155, 85);
+        cruzV.lineTo(45, 85);
+        cruzV.lineTo(45, 65);
+         ctxY.strokeStyle = "white";
+        ctxY.stroke(cruzV);
+        ctxY.fillStyle = "white";
+        ctxY.fill(cruzV);
+
+
+</script>
+</body>
+</html>

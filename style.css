@@ -1,0 +1,14 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.first-game {
+    margin: 100px;
+}
+
+.second-game {
+    border: red 1px solid;
+    margin: 100px;
+}
